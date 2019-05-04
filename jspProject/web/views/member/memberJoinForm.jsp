@@ -4,6 +4,38 @@
 <html>
 <head>
 <title>Insert title here</title>
+<style>
+   .outer{
+      width:600px;
+      height:500px;
+      background:black;
+      color:white;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:50px;
+   }
+   
+   #idCheck, #ckZip, #goMain, #joinBtn {
+      background:orangered;
+      border-radius:5px;
+      width:80px;
+      height:25px;
+      text-align:center;
+   }
+   
+   #idCheck:hover, #ckZip:hover, #joinBtn:hover, #goMain:hover {
+      cursor:pointer;
+   }
+   td {
+      text-align:right;
+   }
+   #ckZip, #joinBtn {
+      background:yellowgreen;
+   }
+   #joinBtn, #goMain {
+      display:inline-block;
+   }
+</style>
 </head>
 <body>
 <%@ include file="../common/menubar.jsp" %>
