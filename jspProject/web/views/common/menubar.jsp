@@ -82,6 +82,8 @@ body {
 	<h1 align="center" onclick="goHome()">Welcome</h1>
 
 	<div class="loginArea">
+		<% if(loginUser == null) { %>
+		<%-- 로그인이 안됐을시  --%>
 		<form id="loginForm" action="<%=request.getContextPath()%>/login.me" method="post">
 			<table>
 				<tr>
@@ -98,6 +100,16 @@ body {
 				<div id="loginBtn" onclick="login()">로그인</div>
 			</div>
 		</form>
+		<% }else { %>
+		<div id="userInfo">
+			<label><%= loginUser.getNickName() %> 님의 방문을 환영합니다.</label>		
+			<div class="btns" align="right">
+				<div id="changeInfo" onclick="changeInfo()">정보수정</div>
+				<div id="logoutBtn" onclick="logout()">로그아웃</div>
+			</div>
+		
+		</div>
+		<% } %>
 	</div>
 	<script>
 		function login(){
